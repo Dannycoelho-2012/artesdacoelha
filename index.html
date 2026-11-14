@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#241b17">
-  <meta name="description" content="Artesanato feito à mão com carinho, criatividade e exclusividade. Encontre peças especiais para sua casa e para presentear.">
+  <meta name="theme-color" content="#30251f">
+  <meta name="description" content="Artes da Coelha: ecobags pintadas à mão, pintura em tecido e peças de crochê feitas com carinho. Conheça a coleção artesanal.">
   <title>Artes da Coelha | Artesanato Feito à Mão</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,6 +24,89 @@
     .product-card:hover img{transform:scale(1.06)}
     .product-card img{transition:transform .5s ease}
     .countdown-box{background:rgba(255,255,255,.12);backdrop-filter:blur(10px)}
+  
+/* Modernização visual — Artes da Coelha */
+:root {
+  color-scheme: light;
+  --brand-ink: #30251f;
+  --brand-terracotta: #b96849;
+  --brand-cream: #fbf7f1;
+  --brand-sage: #78836b;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+body {
+  background: var(--brand-cream);
+  color: var(--brand-ink);
+  letter-spacing: -.01em;
+}
+::selection { background: #e8c7a9; color: #30251f; }
+header {
+  background: rgba(255,255,255,.88) !important;
+  border-bottom: 1px solid rgba(120,95,75,.12) !important;
+  box-shadow: 0 8px 30px rgba(49,35,25,.045);
+  backdrop-filter: blur(18px) saturate(160%);
+}
+header nav { min-height: 76px; }
+header nav > a:first-child {
+  letter-spacing: -.045em;
+  line-height: 1.05;
+}
+header nav > a:last-child {
+  box-shadow: 0 8px 22px rgba(185,104,73,.22);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+header nav > a:last-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(185,104,73,.28);
+}
+.hero-gradient {
+  background:
+    radial-gradient(ellipse at 82% 20%, rgba(214,170,101,.25), transparent 34%),
+    radial-gradient(ellipse at 8% 90%, rgba(200,117,82,.20), transparent 38%),
+    linear-gradient(130deg,#211a17 0%,#3c2b23 52%,#72503b 100%);
+}
+#inicio h1 { letter-spacing: -.045em; }
+#inicio img {
+  border-radius: 2rem !important;
+  box-shadow: 0 28px 70px rgba(0,0,0,.28);
+  border: 7px solid rgba(255,255,255,.12);
+}
+section { position: relative; }
+#produtos { background: linear-gradient(180deg,#fbf7f1 0%,#f5eee5 100%); }
+.product-card, .photo-card, article {
+  border: 1px solid rgba(120,95,75,.10);
+  box-shadow: 0 12px 35px rgba(49,35,25,.07);
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.product-card:hover, .photo-card:hover, article:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 48px rgba(49,35,25,.12);
+}
+.product-card img, .photo-card img { transition: transform .65s cubic-bezier(.2,.7,.2,1); }
+a, button { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #d6aa65;
+  outline-offset: 4px;
+}
+#sobre { background: #fff; }
+#depoimentos { background: linear-gradient(180deg,#f5eee5,#fbf7f1); }
+#contato, footer { background: #241b17; }
+button, .btn, a[class*="bg-craft-terracotta"] {
+  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
+}
+button:hover, a[class*="bg-craft-terracotta"]:hover { filter: brightness(1.06); }
+@media (max-width: 767px) {
+  header nav { padding-top: 13px !important; padding-bottom: 13px !important; }
+  header nav > a:first-child { font-size: 1.35rem !important; }
+  #inicio .max-w-7xl { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+  #inicio h1 { font-size: clamp(2.55rem, 11vw, 3.8rem) !important; }
+  #inicio img { border-radius: 1.35rem !important; border-width: 4px; }
+  section.py-20 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
   </style>
 </head>
 <body class="font-sans text-craft-dark antialiased">
