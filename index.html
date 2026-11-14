@@ -25,89 +25,75 @@
     .product-card img{transition:transform .5s ease}
     .countdown-box{background:rgba(255,255,255,.12);backdrop-filter:blur(10px)}
   
-/* Modernização visual — Artes da Coelha */
+
+
+  
+/* Tema principal roxo — Artes da Coelha */
 :root {
   color-scheme: light;
-  --brand-ink: #30251f;
-  --brand-terracotta: #b96849;
-  --brand-cream: #fbf7f1;
-  --brand-sage: #78836b;
+  --brand-ink: #2d2038;
+  --brand-purple: #7041a6;
+  --brand-purple-dark: #40245f;
+  --brand-purple-deep: #281638;
+  --brand-lilac: #eee5f7;
+  --brand-cream: #faf7fc;
+  --brand-accent: #b58ad9;
 }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body {
-  background: var(--brand-cream);
-  color: var(--brand-ink);
-  letter-spacing: -.01em;
+  background: var(--brand-cream) !important;
+  color: var(--brand-ink) !important;
 }
-::selection { background: #e8c7a9; color: #30251f; }
+::selection { background: #d8c0ee; color: #281638; }
 header {
-  background: rgba(255,255,255,.88) !important;
-  border-bottom: 1px solid rgba(120,95,75,.12) !important;
-  box-shadow: 0 8px 30px rgba(49,35,25,.045);
-  backdrop-filter: blur(18px) saturate(160%);
-}
-header nav { min-height: 76px; }
-header nav > a:first-child {
-  letter-spacing: -.045em;
-  line-height: 1.05;
-}
-header nav > a:last-child {
-  box-shadow: 0 8px 22px rgba(185,104,73,.22);
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-header nav > a:last-child:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 26px rgba(185,104,73,.28);
+  background: rgba(255,255,255,.9) !important;
+  border-bottom: 1px solid rgba(112,65,166,.14) !important;
+  box-shadow: 0 8px 30px rgba(54,30,78,.06) !important;
 }
 .hero-gradient {
   background:
-    radial-gradient(ellipse at 82% 20%, rgba(214,170,101,.25), transparent 34%),
-    radial-gradient(ellipse at 8% 90%, rgba(200,117,82,.20), transparent 38%),
-    linear-gradient(130deg,#211a17 0%,#3c2b23 52%,#72503b 100%);
+    radial-gradient(ellipse at 82% 18%, rgba(190,151,225,.28), transparent 35%),
+    radial-gradient(ellipse at 8% 92%, rgba(135,88,181,.26), transparent 38%),
+    linear-gradient(130deg,#241431 0%,#43245f 52%,#7041a6 100%) !important;
 }
-#inicio h1 { letter-spacing: -.045em; }
-#inicio img {
-  border-radius: 2rem !important;
-  box-shadow: 0 28px 70px rgba(0,0,0,.28);
-  border: 7px solid rgba(255,255,255,.12);
+#inicio h1 { letter-spacing: -.05em; }
+#produtos {
+  background: linear-gradient(180deg,#faf7fc 0%,#f1eaf8 100%) !important;
 }
-section { position: relative; }
-#produtos { background: linear-gradient(180deg,#fbf7f1 0%,#f5eee5 100%); }
+#sobre { background: #fff !important; }
+#depoimentos {
+  background: linear-gradient(180deg,#f1eaf8,#faf7fc) !important;
+}
+#contato, footer {
+  background: #281638 !important;
+}
+.text-craft-terracotta { color: #7041a6 !important; }
+.bg-craft-terracotta { background-color: #7041a6 !important; }
+.hover\:bg-craft-terracotta:hover { background-color: #563080 !important; }
+.text-craft-dark { color: #2d2038 !important; }
+.bg-craft-dark { background-color: #352044 !important; }
+.border-craft-terracotta { border-color: #7041a6 !important; }
 .product-card, .photo-card, article {
-  border: 1px solid rgba(120,95,75,.10);
-  box-shadow: 0 12px 35px rgba(49,35,25,.07);
-  transition: transform .28s ease, box-shadow .28s ease;
+  border-color: rgba(112,65,166,.13) !important;
+  box-shadow: 0 12px 35px rgba(54,30,78,.075) !important;
 }
 .product-card:hover, .photo-card:hover, article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 22px 48px rgba(49,35,25,.12);
+  box-shadow: 0 22px 48px rgba(54,30,78,.15) !important;
 }
-.product-card img, .photo-card img { transition: transform .65s cubic-bezier(.2,.7,.2,1); }
-a, button { -webkit-tap-highlight-color: transparent; }
+button, a[class*="bg-craft-terracotta"], header nav > a:last-child {
+  box-shadow: 0 8px 22px rgba(112,65,166,.2);
+}
+button:hover, a[class*="bg-craft-terracotta"]:hover {
+  filter: brightness(1.08);
+}
 a:focus-visible, button:focus-visible {
-  outline: 3px solid #d6aa65;
+  outline: 3px solid #b58ad9;
   outline-offset: 4px;
 }
-#sobre { background: #fff; }
-#depoimentos { background: linear-gradient(180deg,#f5eee5,#fbf7f1); }
-#contato, footer { background: #241b17; }
-button, .btn, a[class*="bg-craft-terracotta"] {
-  transition: transform .2s ease, filter .2s ease, box-shadow .2s ease;
-}
-button:hover, a[class*="bg-craft-terracotta"]:hover { filter: brightness(1.06); }
 @media (max-width: 767px) {
-  header nav { padding-top: 13px !important; padding-bottom: 13px !important; }
-  header nav > a:first-child { font-size: 1.35rem !important; }
-  #inicio .max-w-7xl { padding-top: 4rem !important; padding-bottom: 4rem !important; }
   #inicio h1 { font-size: clamp(2.55rem, 11vw, 3.8rem) !important; }
-  #inicio img { border-radius: 1.35rem !important; border-width: 4px; }
-  section.py-20 { padding-top: 4rem !important; padding-bottom: 4rem !important; }
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
 
-  </style>
+</style>
 </head>
 <body class="font-sans text-craft-dark antialiased">
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-stone-200">
